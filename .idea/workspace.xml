@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5744ddc-3bf4-4aaf-aef2-e7fc2bbb089e" name="Changes" comment="ADD model-databaseTable">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lessons/pizzery/springlamiapizzeriacrud/controllers/PizzaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lessons/pizzery/springlamiapizzeriacrud/repository/PizzaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/pizzas/index.html" afterDir="false" />
+    <list default="true" id="c5744ddc-3bf4-4aaf-aef2-e7fc2bbb089e" name="Changes" comment="ADD index">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/pizzery/springlamiapizzeriacrud/controllers/PizzaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/pizzery/springlamiapizzeriacrud/controllers/PizzaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/pizzery/springlamiapizzeriacrud/repository/PizzaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/pizzery/springlamiapizzeriacrud/repository/PizzaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pizzas/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pizzas/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -55,7 +58,8 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "G:/boolean precorso/CORSO BOOLEAN JAVA/spring-la-mia-pizzeria-crud_repo/src/main/resources/templates/pizzas"
+    "last_opened_file_path": "G:/boolean precorso/CORSO BOOLEAN JAVA/spring-la-mia-pizzeria-crud_repo/src/main/resources/templates/pizzas",
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -79,11 +83,19 @@
       <option name="project" value="LOCAL" />
       <updated>1680096605542</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ADD index">
+      <created>1680098511101</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680098511101</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ADD model-databaseTable" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD model-databaseTable" />
+    <MESSAGE value="ADD index" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD index" />
   </component>
 </project>

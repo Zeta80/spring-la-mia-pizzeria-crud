@@ -6,23 +6,20 @@
 </head>
 <body>
 <h1>pizze</h1>
-<table>
-    <thead>
-    <tr>
-        <th>nome</th>
-        <th>descrizione</th>
-        <th>prezzo</th>
+<h1>Elenco Pizze</h1>
 
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="pizza : ${list}" th:object="${pizza}">
-        <td th:text="*{title}"></td>
-        <td th:text="*{authors}"></td>
-        <td th:text="*{publisher}"></td>
-    </tr>
-    </tbody>
-</table>
+<div th:if="${pizzas.empty}">
+    <p>Nessuna pizza presente nella nostra applicazione</p>
+</div>
+
+<div th:if="${not pizzas.empty}">
+    <ul>
+        <li th:each="pizza : ${pizzas}">
+            <span th:text="${pizza.nome}"></span>
+        </li>
+    </ul>
+</div>
+
 
 </body>
 </html>

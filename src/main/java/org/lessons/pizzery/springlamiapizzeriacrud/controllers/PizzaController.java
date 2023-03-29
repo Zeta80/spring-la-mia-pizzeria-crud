@@ -17,15 +17,12 @@ public class PizzaController {
 
 
     @GetMapping
-    public String index(Model model) {
-        List<Pizza> pizzas = pizzaRepository.findAll();
-        if (pizzas.isEmpty()) {
-            model.addAttribute("message", "Non ci sono pizze presenti nella nostra applicazione.");
-        } else {
+        public String index(Model model) {
+            List<Pizza> pizzas = pizzaRepository.findAll();
             model.addAttribute("pizzas", pizzas);
+            return "pizzas/index";
         }
-        return "pizzas/index";
     }
 
 
-}
+
