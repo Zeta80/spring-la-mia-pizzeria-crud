@@ -24,17 +24,23 @@
         <th></th>
     </tr>
     </thead>
-    <tbody>
-    <tr th:each="pizza : ${list}" th:object="${pizza}">
-        <td th:text="*{nome}"></td>
-        <td th:text="*{descrizione}"></td>
-        <td th:text="*{prezzo}"></td>
-        <td>
-            <a th:href="@{|/pizza/*{id}|}" class="btn btn-primary btn-sm" title="detail"><i
-                    class="fa-solid fa-book"></i></a>
-        </td>
-    </tr>
-    </tbody>
+
+        <tbody>
+        <tr th:if="${!list.isEmpty()}" th:each="pizza : ${list}" th:object="${pizza}">
+            <td th:text="*{id}"></td>
+            <td th:text="*{nome}"></td>
+            <td th:text="*{descrizione}"></td>
+            <td th:text="*{prezzo}"></td>
+            <td>
+                <a th:href="@{|/pizzas/*{id}|}">Detail</a>
+            </td>
+
+        </tr>
+        <tr th:if="${list.isEmpty()}">
+            <td colspan="4">Sorry, there aren't pizzas available</td>
+        </tr>
+        </tbody>
+
     </table>
 </div>
 

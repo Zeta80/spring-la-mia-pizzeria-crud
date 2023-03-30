@@ -13,19 +13,19 @@
 <div th:replace="~{fragments/navbar :: navbar}"></div>
 
 <div class="container" th:object="${pizza}">
-  <h1 th:text="*{name}">Pizzas</h1>
+  <h1 >Pizzas</h1>
   <hr/>
   <div>
     <dl>
-      <dt>Name</dt>
+      <dt>Nome</dt>
       <dd th:text="*{nome}"></dd>
 
-      <th:block th:unless="${#strings.isEmpty(pizza.description)}">
-        <dt>Description</dt>
-        <dd th:text="*{descrizione}"></dd>
-      </th:block>
 
-      <dt>Price</dt>
+      <dt>Descrizione</dt>
+      <dd th:text="*{descrizione}"></dd>
+
+
+      <dt>Prezzo</dt>
       <dd th:text="*{prezzo}"></dd>
 
     </dl>

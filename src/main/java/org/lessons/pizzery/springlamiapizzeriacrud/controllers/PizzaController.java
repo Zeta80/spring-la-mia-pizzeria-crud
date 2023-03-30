@@ -16,14 +16,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.server.ResponseStatusException;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/pizzas")
 public class PizzaController {
     @Autowired
     private PizzaRepository pizzaRepository;
-
-
-
-
 
 
     @GetMapping
@@ -31,12 +27,12 @@ public class PizzaController {
     public String index(Model model, @RequestParam(name = "q") Optional<String> keyword) {
         List<Pizza> pizzas;
         //se il parametro non arriva visualizerà tutto l'elenco
-        if(keyword.isEmpty()){
+        if (keyword.isEmpty()) {
             pizzas = pizzaRepository.findAll(Sort.by("nome"));
             model.addAttribute("list", pizzas);
         }
         //se invece viene passato un parametro, verrà estratto e fatta partire una query con il metodo repository
-        else{
+        else {
             pizzas = pizzaRepository.findByNomeContainingIgnoreCase(keyword.get());
             //se ci saranno parametri di ricerca collego il parametro passato nell'input al model
             model.addAttribute("keyword", keyword.get());
@@ -46,15 +42,14 @@ public class PizzaController {
     }
 
 
-
     @GetMapping("/{pizzaId}")
-    public String show(@PathVariable("pizzaId") Integer id, Model model){
+    public String show(@PathVariable("pizzaId") Integer id, Model model) {
         Optional<Pizza> result = pizzaRepository.findById(id);
-        if(result.isPresent()){
+        if (result.isPresent()) {
             model.addAttribute("pizza", result.get());
             return "/pizzas/show";
-        }else{
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Pizza with id " + id + " not found.");
         }
     }
 }
