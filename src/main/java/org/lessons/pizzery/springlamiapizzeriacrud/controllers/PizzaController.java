@@ -22,11 +22,27 @@ public class PizzaController {
     private PizzaRepository pizzaRepository;
 
 
+
+
+
+
     @GetMapping
-    public String index(Model model) {
-        List<Pizza> pizzas = pizzaRepository.findAll();
+    //uso Option perchè il parametro potrà esserci come non esserci
+    public String index(Model model, @RequestParam(name = "q") Optional<String> keyword) {
+        List<Pizza> pizzas;
+        //se il parametro non arriva visualizerà tutto l'elenco
+        if(keyword.isEmpty()){
+            pizzas = pizzaRepository.findAll(Sort.by("nome"));
+            model.addAttribute("list", pizzas);
+        }
+        //se invece viene passato un parametro, verrà estratto e fatta partire una query con il metodo repository
+        else{
+            pizzas = pizzaRepository.findByNomeContainingIgnoreCase(keyword.get());
+            //se ci saranno parametri di ricerca collego il parametro passato nell'input al model
+            model.addAttribute("keyword", keyword.get());
+        }
         model.addAttribute("list", pizzas);
-        return "pizzas/index";
+        return "/pizzas/index";
     }
 
 
@@ -36,7 +52,7 @@ public class PizzaController {
         Optional<Pizza> result = pizzaRepository.findById(id);
         if(result.isPresent()){
             model.addAttribute("pizza", result.get());
-            return "pizzas/show";
+            return "/pizzas/show";
         }else{
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }

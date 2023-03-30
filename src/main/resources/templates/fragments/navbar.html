@@ -24,6 +24,15 @@
                name="q">
         <button class="btn btn-outline-light" type="submit"><i
                 class="fa-solid fa-magnifying-glass"></i></button>
+      <form class="d-flex"
+            th:if="${showSearch}"
+            role="search"
+            method="get"
+            th:action="@{/pizzas}"
+      >
+        <!--colleghiamo il parametro del fragment all'attribute th:value dell'imput che si collegherà al model-->
+        <input name="q" th:value="${keyword}" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
   </div>
