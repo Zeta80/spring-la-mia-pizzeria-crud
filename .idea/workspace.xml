@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5744ddc-3bf4-4aaf-aef2-e7fc2bbb089e" name="Changes" comment="ADD index. adjust">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/import.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/resources.html" afterDir="false" />
+    <list default="true" id="c5744ddc-3bf4-4aaf-aef2-e7fc2bbb089e" name="Changes" comment="ADD fragments, navbar, boostrap, adjust templates">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/pizzas/show.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/pizzery/springlamiapizzeriacrud/controllers/PizzaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/pizzery/springlamiapizzeriacrud/controllers/PizzaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/pizzery/springlamiapizzeriacrud/repository/PizzaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/pizzery/springlamiapizzeriacrud/repository/PizzaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pizzas/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pizzas/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,13 +100,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680100080641</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ADD fragments, navbar, boostrap, adjust templates">
+      <created>1680181941244</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680181941244</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ADD model-databaseTable" />
     <MESSAGE value="ADD index" />
     <MESSAGE value="ADD index. adjust" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD index. adjust" />
+    <MESSAGE value="ADD fragments, navbar, boostrap, adjust templates" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD fragments, navbar, boostrap, adjust templates" />
   </component>
 </project>

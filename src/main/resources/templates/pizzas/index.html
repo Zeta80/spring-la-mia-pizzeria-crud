@@ -13,18 +13,31 @@
 <h1>pizze</h1>
 <h1>Elenco Pizze</h1>
 
-<div th:if="${pizzas.empty}">
-    <p>Nessuna pizza presente nella nostra applicazione</p>
+
+
+    <table class="table">
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Descrizione</th>
+        <th>Prezzo</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="pizza : ${list}" th:object="${pizza}">
+        <td th:text="*{nome}"></td>
+        <td th:text="*{descrizione}"></td>
+        <td th:text="*{prezzo}"></td>
+        <td>
+            <a th:href="@{|/pizza/*{id}|}" class="btn btn-primary btn-sm" title="detail"><i
+                    class="fa-solid fa-book"></i></a>
+        </td>
+    </tr>
+    </tbody>
+    </table>
 </div>
 
-<div th:if="${not pizzas.empty}">
-    <ul>
-        <li th:each="pizza : ${pizzas}">
-            <span th:text="${pizza.nome}"></span>
-        </li>
-    </ul>
-</div>
-</div>
 
 
 </body>
