@@ -1,11 +1,11 @@
 package org.lessons.pizzery.springlamiapizzeriacrud.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -15,11 +15,26 @@ public class Pizza {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(nullable = false)
+    @NotEmpty(message = "no scrivi qualcosa")
     private String nome;
+    @NotEmpty(message = "no scrivi qualcosa")
+
+    @Lob
     private String descrizione;
+    @NotNull(message = "bro... ")
+    @Positive(message = "alza i soldi")
+    @Column(nullable = false)
     private Double prezzo;
     private LocalDateTime createdAt;
+
+    public Pizza(){
+        super();
+    }
+
+
+
+
+
 
     public Integer getId() {
         return id;
