@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5744ddc-3bf4-4aaf-aef2-e7fc2bbb089e" name="Changes" comment="Finish">
+    <list default="true" id="c5744ddc-3bf4-4aaf-aef2-e7fc2bbb089e" name="Changes" comment="finish, add create page button">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/pizzas/edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/pizzery/springlamiapizzeriacrud/controllers/PizzaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/pizzery/springlamiapizzeriacrud/controllers/PizzaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/pizzery/springlamiapizzeriacrud/service/PizzaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/pizzery/springlamiapizzeriacrud/service/PizzaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pizzas/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pizzas/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,16 +57,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/boolean precorso/CORSO BOOLEAN JAVA/best-of-the-year2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "G:/boolean precorso/CORSO BOOLEAN JAVA/spring-la-mia-pizzeria-crud_repo/src/main/resources/templates/pizzas",
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\boolean precorso\CORSO BOOLEAN JAVA\spring-la-mia-pizzeria-crud_repo\src\main\resources\templates\pizzas" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\boolean precorso\CORSO BOOLEAN JAVA\spring-la-mia-pizzeria-crud_repo\src\main\resources\templates\pizzas\pizzas" />
       <recent name="G:\boolean precorso\CORSO BOOLEAN JAVA\spring-la-mia-pizzeria-crud_repo\src\main\resources\templates\pizzas" />
@@ -134,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680268901345</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="finish, add create page button">
+      <created>1680269215105</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680269215105</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -144,6 +157,7 @@
     <MESSAGE value="ADD fragments, navbar, boostrap, adjust templates" />
     <MESSAGE value="adjust" />
     <MESSAGE value="Finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish" />
+    <MESSAGE value="finish, add create page button" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish, add create page button" />
   </component>
 </project>

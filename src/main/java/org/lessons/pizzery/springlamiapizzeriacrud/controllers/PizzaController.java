@@ -2,6 +2,7 @@ package org.lessons.pizzery.springlamiapizzeriacrud.controllers;
 import java.util.List;
 import java.util.Optional;
 
+import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.validation.Valid;
 import org.lessons.pizzery.springlamiapizzeriacrud.exceptions.PizzaNotFoundException;
 import org.lessons.pizzery.springlamiapizzeriacrud.model.Pizza;
@@ -75,6 +76,50 @@ public class PizzaController {
         pizzaService.createPizza(formPizza);
         return "redirect:/pizzas";
 
+    }
+
+
+
+    @GetMapping("/edit/{id}")
+    public String edit(@PathVariable Integer id, Model model) {
+        try{
+            Pizza pizza = pizzaService.getById(id);
+            model.addAttribute("pizza", pizza);
+            return "/pizzas/edit";
+
+        }catch (PizzaNotFoundException e){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @PostMapping("/edit/{id}")
+    public String doEdit(@PathVariable Integer id, @Valid @ModelAttribute("pizza") Pizza formPizza, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()){
+            return "/pizzas/edit";
+
+        }
+        try{
+            Pizza updatedPizza = pizzaService.updatePizza(formPizza, id);
+            return "redirect:/pizzas/" + Integer.toString(updatedPizza.getId());
+
+        }catch (PizzaNotFoundException e){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+    }
+
+
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable Integer id){
+        try{
+            boolean success = pizzaService.deleteById(id);
+            if (success)
+                return "redirect:/pizzas";
+            else
+                throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR);
+
+        }catch (PizzaNotFoundException e){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
     }
 }
 

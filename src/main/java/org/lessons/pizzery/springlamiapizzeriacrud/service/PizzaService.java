@@ -17,6 +17,15 @@ public class PizzaService {
     @Autowired
     PizzaRepository pizzaRepository;
 
+
+    public Pizza updatePizza(Pizza formPizza, Integer id) throws PizzaNotFoundException {
+        Pizza pizzaUpdate = getById(id);
+        pizzaUpdate.setNome(formPizza.getNome());
+        pizzaUpdate.setDescrizione(formPizza.getDescrizione());
+        pizzaUpdate.setPrezzo(formPizza.getPrezzo());
+        return pizzaRepository.save(pizzaUpdate);
+    }
+
     public Pizza createPizza(Pizza formPizza) {
         Pizza pizzaToPersist = new Pizza();
         pizzaToPersist.setNome(formPizza.getNome());
