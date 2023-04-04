@@ -35,7 +35,9 @@
             <td th:text="*{descrizione}"></td>
             <td th:text="*{prezzo}"></td>
             <td>
-                <a th:href="@{|/pizzas/*{id}|}">Detail</a>
+                <a th:href="@{|/pizzas/*{id}|}" class="btn btn-primary btn-sm" >Detail</a>
+                <a th:href="@{|/pizzas/edit/*{id}|}" class="btn btn-primary btn-sm" title="edit">Edit</a>
+                <a th:href="@{|/pizzas/delete/*{id}|}" class="btn btn-primary btn-sm" title="edit">Delete</a>
             </td>
 
         </tr>
